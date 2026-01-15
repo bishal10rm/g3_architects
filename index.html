@@ -143,11 +143,13 @@
             font-weight: 600;
             margin-top: 10px;
         }
-        /* responsive mdeia query for small device */
-        @media screen and (max-width: 576px) {
-               .navbar, .navlink, .teams {
-                        flex-direction: column;
-                }
+
+        .facts-container{
+            justify-content: center;
+                     gap: 24px;
+        }
+
+        
 
           .team-img-container {
                grid-template-columns: repeat(1,1fr);
@@ -156,20 +158,43 @@
           .our-features{  
               margin-left: 20px;
           }
-        }
+
+          .sponsor-info{
+              max-width: 540px;
+              margin: 50px auto;
+            text-align: center;
+         }
         
         .fact-description{
              max-width: 540px;
          }
+        
+         .sponsor-companies{
+                   display: grid;
+            grid-template-columns: repeat(5, 1fr) ;
+         }
+
+         .sponsor-companies img{ 
+                      filter:grayscale(100%);
+         }
+         
+         
         /* responsive mdeia query for medium device */
          
          @media screen and (min-width:576px) and (max-width:992px) {
                                   .teams {
                                     flex-direction: column;
                                   }
-                                  .our-features{  
+                                  .our-features {  
                                     margin-left: 50px auto;
                                  } 
+
+                                 .sponsor-companies, .facts-container{
+                          grid-template-columns: repeat(2,1fr);
+                                          gap:50px;
+                                    justify-content: center;
+        }
+        
          }
 
     </style>
@@ -240,7 +265,20 @@
             </div>
          </div>
       </section>
-
+      
+      <section class="our-sponsors">
+        <div class="sponsor-info">
+            <h3 class="sponsor-title">Our Sponspors</h3>
+             <p class="text-light-grey">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+        </div>
+          <div class="sponsor-companies">
+             <img src="images/sponsors/spotify.png" alt="">
+             <img src="images/sponsors/amazon.png" alt="">
+             <img src="images/sponsors/google.png" alt="">
+             <img src="images/sponsors/telerama.png" alt="">
+             <img src="images/sponsors/figma.png" alt="">
+          </div>
+      </section>
      </main>
       <footer>
 
