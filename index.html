@@ -115,7 +115,34 @@
         .quick-response{  
              font-weight: 500;
         } 
+        
+        .facts-container{
+            display: grid;
+            grid-template-columns: repeat(4,1fr);
+        }
+        .fact-card{ 
+            border: 1px solid #FF900E;
+            width: 240px;
+            height: 240px;
+            border-radius: 8px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
 
+        } 
+        
+        .fact-number{ 
+            font-size: 2.8rem;
+            font-weight: 600;
+            margin-top: 5px;
+            margin-bottom: 10px;
+        } 
+
+        .fact-name{
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-top: 10px;
+        }
         /* responsive mdeia query for small device */
         @media screen and (max-width: 576px) {
                .navbar, .navlink, .teams {
@@ -130,7 +157,10 @@
               margin-left: 20px;
           }
         }
-
+        
+        .fact-description{
+             max-width: 540px;
+         }
         /* responsive mdeia query for medium device */
          
          @media screen and (min-width:576px) and (max-width:992px) {
@@ -184,7 +214,31 @@
 
       <section>
         <h3 class="section-title">Some Facts</h3>
-        <p class="text-light-grey">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+        <p class="text-light-grey fact-description">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration.</p>
+         <div class="facts-container">
+            <div class="fact-card ">
+                <img src="images/icons/ribon.png" alt="" class="fact-icon">
+                <h4 class="fact-number">54</h4>
+                <h5 class="fact-name">Award winings</h5>
+            </div>
+            <div class="fact-card">
+               <div>
+                 <img src="images/icons/projects.png" alt="" class="fact-icon">
+                <h4 class="fact-number">1458</h4>
+                <h5 class="fact-name">Projects finished</h5>
+               </div>
+            </div>
+            <div class="fact-card">
+                <img src="images/icons/customers.png" alt="" class="fact-icon">
+                <h4 class="fact-number">590</h4>
+                <h5 class="fact-name">clients worked</h5>
+            </div>
+            <div class="fact-card">
+                <img src="images/icons/email.png" alt="" class="fact-icon">
+                <h4 class="fact-number">22558</h4>
+                <h5 class="fact-name">email send</h5>
+            </div>
+         </div>
       </section>
 
      </main>
